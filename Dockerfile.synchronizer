@@ -1,0 +1,9 @@
+FROM xosproject/xos-synchronizer-base:2.0.0
+
+COPY xos/synchronizer /opt/xos/synchronizers/iottalk
+COPY VERSION /opt/xos/synchronizers/iottalk
+ENTRYPOINT []
+
+WORKDIR "/opt/xos/synchronizers/iottalk"
+
+CMD bash -c "python iot-talk-synchronizer.py"

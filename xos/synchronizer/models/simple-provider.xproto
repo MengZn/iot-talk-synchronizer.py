@@ -1,0 +1,10 @@
+option name = "iottalk";
+option app_label = "iottalk";
+
+message IotTalkService (Service){
+    option verbose_name = "IOT TALK Service";
+}
+
+
+message IotTalkServiceInstance (ServiceInstance){
+}

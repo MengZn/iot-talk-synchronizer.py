@@ -1,0 +1,27 @@
+name: iottalk
+accessor:
+  username: admin@opencord.org
+  password: letmein
+  endpoint: xos-core:50051
+models_dir: "/opt/xos/synchronizers/iottalk/models"
+steps_dir: "/opt/xos/synchronizers/iottalk/steps"
+model_policies_dir: "/opt/xos/synchronizers/iottalk/model_policies"
+required_models:
+  - IotTalkService
+  - IotTalkServiceInstance
+  - KubernetesService
+  - KubernetesServiceInstance
+  - KubernetesConfigMap
+  - KubernetesSecret
+  - KubernetesConfigVolumeMount
+  - KubernetesSecretVolumeMount
+logging:
+  version: 1
+  handlers:
+    console:
+      class: logging.StreamHandler
+  loggers:
+    'multistructlog':
+      handlers:
+          - console
+      level: DEBUG
